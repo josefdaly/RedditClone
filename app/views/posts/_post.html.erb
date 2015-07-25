@@ -1,0 +1,8 @@
+<% url = post.url.empty? ? post_url(post) : post.url %>
+  <h3>
+    <%= link_to post.title, url %>
+  </h3>
+  <small>
+    <%= link_to 'comments', post_url(post) %>
+  </small>
+<hr>

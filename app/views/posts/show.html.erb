@@ -1,0 +1,21 @@
+<% url = @post.url.empty? ? post_url(@post) : @post.url %>
+
+<h1> <%= link_to @post.title, url %> </h1>
+
+<pre><%= @post.content %></pre>
+
+<h2>Subs:</h2>
+
+<% @post.subs.each do |sub| %>
+  <%= link_to sub.title, sub_url(sub) %>
+<% end %>
+
+<hr>
+
+<% if current_user == @post.author %>
+  <%= link_to 'Edit this Post', edit_post_url(@post) %> |
+<% end %>
+<%= link_to 'Add Comment', new_post_comment_url(@post) %>
+
+<hr>
+<%= render @comments[nil] unless @comments[nil].nil? %>

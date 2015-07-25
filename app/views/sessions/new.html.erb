@@ -1,0 +1,8 @@
+<h1>Sign In</h1>
+<%= render 'shared/errors' %>
+<%= render 'users/form',
+           action: session_url,
+           method: 'post',
+           user: @user,
+           submit_text: 'Log In'
+           %>

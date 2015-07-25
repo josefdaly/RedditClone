@@ -1,0 +1,8 @@
+<h1>New Post</h1>
+<%= render 'shared/errors' %>
+<%= render 'form',
+           action: posts_url,
+           method: 'post',
+           post: @post,
+           subs: Sub.all,
+           submit_text: 'Submit Post' %>

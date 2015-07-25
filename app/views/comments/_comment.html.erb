@@ -1,0 +1,9 @@
+<li>
+  <p>By: <%= comment.author.username %></p>
+  <p><%= comment.content %></p>
+  <small> <%= link_to 'reply', comment %></small>
+  <hr>
+  <ul>
+    <%= render @comments[comment.id] unless @comments[comment.id].nil? %>
+  </ul>
+</li>

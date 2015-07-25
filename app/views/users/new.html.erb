@@ -1,0 +1,9 @@
+<h1> Create Account </h1>
+
+<%= render 'shared/errors' %>
+<%= render 'form',
+           action: user_url,
+           method: 'post',
+           user: @user,
+           submit_text: 'Sign Up'
+           %>

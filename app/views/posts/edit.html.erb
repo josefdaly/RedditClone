@@ -1,0 +1,8 @@
+<h1>Edit Post</h1>
+<%= render 'shared/errors' %>
+<%= render 'form',
+           action: post_url(@post),
+           method: 'patch',
+           post: @post,
+           subs: Sub.all,
+           submit_text: 'Update Post' %>

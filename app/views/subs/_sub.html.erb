@@ -1,0 +1,11 @@
+<p>
+  <strong> <%= link_to sub.title, sub %> </strong>
+</p>
+<p>
+  <small> <%= sub.description %></small>
+</p>
+<% if current_user == sub.moderator %>
+  <%= link_to 'Edit Sub', edit_sub_url(sub) %>
+<% end %>
+
+<hr>

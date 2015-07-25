@@ -1,0 +1,7 @@
+<h1>New Sub</h1>
+<%= render 'shared/errors' %>
+<%= render 'form',
+           action: subs_url,
+           method: 'post',
+           sub: @sub,
+           submit_text: 'Create Sub'%>
