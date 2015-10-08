@@ -7,6 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="container">
+
 <% if logged_in? %>
   <p>Welcome, <%= current_user.username %></p>
   <%= button_to 'Sign Out', session_url, method: 'delete' %>
@@ -16,6 +18,7 @@
 <% end %>
 
 <%= yield %>
+</div>
 
 </body>
 </html>
